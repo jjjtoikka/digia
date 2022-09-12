@@ -1,0 +1,23 @@
+@import 'vars.css';
+@import 'elems.css';
+@import 'grid.css';
+@import 'form.css';
+@import 'app.css';
+
+:root {
+  font-family: Arial, sans-serif;
+  font-size: var(--size-s);
+  line-height: var(--space-s);
+  font-weight: 400;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background-color: var(--bg-light);
+}

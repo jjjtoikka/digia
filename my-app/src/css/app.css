@@ -1,0 +1,23 @@
+header,
+.content {
+  padding: var(--space-m);
+}
+
+header {
+  background-color: var(--bg-dark);
+}
+
+.logo {
+  display: inline-block;
+  width: var(--space-m);
+  height: var(--space-m);
+  background-color: var(--common-light);
+}
+
+.content {
+  max-width: var(--page-width);
+}
+
+.lightest-bg {
+  background-color: var(--common-light);
+}

@@ -1,0 +1,31 @@
+:root {
+  --page-width: 912px;
+  --space-2xs: 8px;
+  --space-xs: 16px;
+  --space-s: 24px;
+  --space-m: 32px;
+  --space-l: 40px;
+  --space-xl: 48px;
+  --space-2xl: 72px;
+
+  --size-xs: 14px;
+  --size-s: 16px;
+  --size-m: 36px;
+
+  --cell-width-s: 180px;
+  --cell-width-m: 250px;
+
+  --text-light: #fff;
+  --text-medium: #757575;
+  --text-dark: #505050;
+
+  --common-light: #fff;
+  --common-dark: #505050;
+
+  --color-primary: #07f;
+
+  --bg-dark: #a3acb5;
+  --bg-medium: #ebebeb;
+  --bg-light: #efefef;
+  --bg-lighter: #f9f9fa;
+}

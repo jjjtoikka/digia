@@ -1,0 +1,24 @@
+form {
+  padding: var(--space-xs);
+  margin-bottom: var(--space-xs);
+}
+input {
+  height: 40px;
+  width: 100%;
+  font-size: inherit;
+  box-sizing: border-box;
+  padding: 0 var(--space-xs);
+  border: 1px solid var(--bg-medium);
+  background-color: var(--bg-lighter);
+}
+
+input:invalid {
+  border: 2px dashed red;
+}
+
+input:invalid:required {
+  border: 2px dashed red;
+}
+
+input:valid {
+}
