@@ -16,7 +16,7 @@ export const Form = ({ model }: Props) => {
   const errors = useState<ErrorData>(errorData);
 
   const saveItem = () => {
-    if (errors.get()) return;
+    // if (haveErrors(errors.get())) return;
     const id = (state.getData().length + 1).toString();
     state.addDataItem({ ...formData.get(), id });
     clearForm();

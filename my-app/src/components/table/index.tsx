@@ -21,8 +21,8 @@ export const Table = ({ data, model }: Props) => {
             )
         )}
       </div>
-      {data.map((item: Data, i: number) => (
-        <Row data={item} key={`row-${i}`} index={i}></Row>
+      {data.map((item: Data, index: number) => (
+        <Row data={item} key={`row-${item.id}`} index={index}></Row>
       ))}
     </section>
   );
