@@ -15,7 +15,7 @@ const useGlobalState = () => {
     },
     addDataItem: (data: Data) => {
       tableData.merge([data]);
-      console.log(tableData.value);
+      // console.log(tableData.value);
     },
     updateData: (data: Data, index: number) => {
       tableData[index].merge(data);

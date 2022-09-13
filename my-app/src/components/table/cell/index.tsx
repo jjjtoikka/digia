@@ -1,5 +1,4 @@
 import React from 'react';
-import useGlobalState from '../../../provider/store';
 import { Data } from '../../../types';
 
 type Props = {

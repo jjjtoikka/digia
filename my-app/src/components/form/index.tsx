@@ -2,7 +2,7 @@ import React from 'react';
 import { useState } from '@hookstate/core';
 import useGlobalState from '../../provider/store';
 import { Data, ErrorData } from '../../types';
-import { unique, validate } from '../../utils';
+import { haveErrors, validate } from '../../utils';
 import { initialErrorModel } from '../../data';
 type Props = {
   model: Data;
@@ -14,11 +14,6 @@ export const Form = ({ model }: Props) => {
 
   const formData = useState<Data>(model);
   const errors = useState<ErrorData>(errorData);
-
-  const haveErrors = () => {
-    console.log(errors.get());
-    return Object.entries(errors.get()).some(([_key, value]) => value === true);
-  };
 
   const saveItem = () => {
     if (errors.get()) return;
@@ -48,6 +43,7 @@ export const Form = ({ model }: Props) => {
               key={key}
               type={key === 'name' ? 'text' : key}
               placeholder={key}
+              // required
               value={value}
               onChange={(e: any) =>
                 updateData(e.target.value, key as keyof Data)
@@ -58,7 +54,7 @@ export const Form = ({ model }: Props) => {
       <div className="cell right">
         <button
           type="button"
-          disabled={!haveErrors()}
+          disabled={haveErrors(errors.get())}
           onClick={() => saveItem()}
         >
           Add new

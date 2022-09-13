@@ -1,4 +1,4 @@
-import { Data } from '../types';
+import { ErrorData } from '../types';
 
 let lastId = 0;
 
@@ -7,6 +7,11 @@ export function unique(i: string | number): string {
   // console.log(key);
   return key;
 }
+
+export const haveErrors = (obj: ErrorData) => {
+  // console.log(errors.get());
+  return Object.entries(obj).some(([_key, value]) => value === false);
+};
 
 export const validate = (value: string, key: string) => {
   let valid = false;
@@ -19,8 +24,3 @@ export const validate = (value: string, key: string) => {
   }
   return valid;
 };
-
-// const validateAll = (data: Data) => {
-//   Object.entries(data).map(
-//     ([key, value], i: number) => validate(key as keyof Data, value))
-// }
